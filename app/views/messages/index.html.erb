@@ -1,3 +1,8 @@
+<div class="pagination-wrapper">
+  <%= will_paginate @messages, renderer: BootstrapPagination::Rails, previous_label:'Previous',
+                    next_label: 'Next', inner_window:1, outer_window:0 %>
+</div>
+
 <% @messages.each do |message| %>
     <div class="col-md-4">
       <div class="message">
