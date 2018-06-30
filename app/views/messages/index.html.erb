@@ -7,6 +7,11 @@
     <div class="col-md-4">
       <div class="message">
         <h2 class="message-title"><%= message.title %></h2>
+
+        <% if message.image.blank? %>
+        <% else %>
+        <%= image_tag message.image.url(:thumb), class: "message_im" %>
+        <% end %>
         <%= link_to 'View Message', message, class: "btn-custom" %>
       </div>
     </div>

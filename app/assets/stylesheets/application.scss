@@ -23,7 +23,7 @@
 /* General styles */
 
 body {
-  background-color: #fff;
+  background-color: #e0ffff;
   font-family: 'Playfair Display', serif;
 }
 
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
   margin-left: 10px;
   padding: 1.4em 1.4em;
-  height: 150px;
+  height: 170px;
   border-bottom: 4px solid #0a8fd5;
 
   .message-title {
@@ -116,6 +116,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .btn-custom {
     margin-top: 20px;
+  }
+
+  .message_im{
+    height: 50px;
+    width: 50px;
   }
 
 }
