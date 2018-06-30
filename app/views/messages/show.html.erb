@@ -3,6 +3,10 @@
     <h2><%= @message.title %></h2>
     <p class="message-posted-by">Posted by <%= @message.user.email %> <%= time_ago_in_words(@message.created_at) %> ago</p>
     <p class="message-desc"><%= @message.description %></p>
+    <% if @message.image.blank? %>
+    <% else %>
+    <%= image_tag @message.image.url(:large) %>
+    <% end %>
 
     <h3 class="comment-section-header">Comments:</h3>
     <p><%= render @message.comments %></p>

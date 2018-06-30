@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :find_message, only: [:show, :edit, :update, :destroy]
 
   def index
-   @messages = Message.all.order("created_at DESC").paginate(page: params[:page], per_page:4)
+   @messages = Message.all.order("created_at DESC").paginate(page: params[:page], per_page:6)
   end
 
   def show
@@ -45,7 +45,7 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:title, :description)
+    params.require(:message).permit(:title, :description, :image)
   end
   def find_message
     @message = Message.find(params[:id])
